@@ -1,0 +1,3 @@
+#!/bin/sh
+read level
+echo level $level | sudo tee /proc/acpi/ibm/fan
