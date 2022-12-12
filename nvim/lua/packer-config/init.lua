@@ -4,10 +4,10 @@ return require'packer'.startup(function()
 	use {'neoclide/coc.nvim', branch = 'release'} --coc nvim
 	use 'kyazdani42/nvim-web-devicons' --icon
 	use 'kyazdani42/nvim-tree.lua' --open file tree
-	use {
-	"windwp/nvim-autopairs", -- autopairs brackets
-    config = function() require("nvim-autopairs").setup {} end
-}
+--	use {
+--	"windwp/nvim-autopairs", -- autopairs brackets
+--    config = function() require("nvim-autopairs").setup {} end
+--}
 	use 'norcalli/nvim-colorizer.lua' --see color of hex color
 	use 'ghifarit53/tokyonight-vim' --theme
 	use { "mhinz/vim-startify" } --start menu
@@ -21,6 +21,7 @@ return require'packer'.startup(function()
 	use 'mengelbrecht/lightline-bufferline' -- for bufferline
 	use 'nvim-treesitter/nvim-treesitter'  -- for better syntax highlighting
 	use 'jose-elias-alvarez/null-ls.nvim'
+	use 'honza/vim-snippets'
 	use { 
   'nvim-telescope/telescope.nvim', tag = '0.1.0',} -- fzf 
   	use "nvim-lua/plenary.nvim" --dependency for telescope

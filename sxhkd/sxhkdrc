@@ -1,7 +1,3 @@
-# Reload functions
-super + shift + d
-	dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'
-
 alt + p 
 	rofi -show drun -show-icons
 
@@ -9,10 +5,10 @@ alt + r
 	bash ~/Rofi-Beats/rofi-beats
 
 alt + comma
-	pamixer -d 5
+	pamixer -d 5; kill -44 $(pidof dwmblocks)
 
 alt + period
-	pamixer -i 5
+	pamixer -i 5; kill -35 $(pidof dwmblocks)
 
 super + control + p 
 	mpc toggle
@@ -140,19 +136,19 @@ super + Escape
 
 # Brightness
 XF86MonBrightnessUp
-	brightnessctl s +100 
+	brightnessctl s +200 
 
 XF86MonBrightnessDown
-	brightnessctl s 100-
+	brightnessctl s 200-
 
 #Volume
 XF86AudioRaiseVolume
-	pamixer -i 5
+	pamixer -i 5; kill -35 $(pidof dwmblocks)
 XF86AudioLowerVolume
-	pamixer -d 5
+	pamixer -d 5; kill -35 $(pidof dwmblocks)
 
 XF86AudioMute
-	pamixer -t
+	pamixer -t; kill -35 $(pidof dwmblocks)
 
 #Mic 
 XF86AudioMicMute
@@ -169,5 +165,5 @@ super + alt + m
 
 
 # Lock and suspend
-super  + Delete
-	slp
+XF86Launch1
+	spd

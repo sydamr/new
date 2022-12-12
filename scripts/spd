@@ -1,4 +1,4 @@
 #!/bin/bash
-echo mem > /sys/power/state &
-#loginctl suspend &
-slock &
+# echo mem > /sys/power/state &
+loginctl suspend &
+betterlockscreen -l blur sleep 2&
